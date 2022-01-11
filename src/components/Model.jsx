@@ -32,7 +32,7 @@ function Model() {
           <div className="row">
             <div className="col-lg-12 lef"><h4>Brand?</h4></div>
             
-            
+            <Link to='/repairtype'><h6 onClick={() => setRepairDetails({ ...repairDetails, deviceModel : "Apple"})}>Apple</h6></Link>
 
             <div className="col-lg-12 lef"><h4>Model?</h4></div>
             
