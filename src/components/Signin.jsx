@@ -1,0 +1,72 @@
+import React, {useState} from "react";
+import { Link, useNavigate } from "react-router-dom"
+import { onAuthStateChanged, signOut, signInWithEmailAndPassword } from "firebase/auth"
+import { auth } from '../firebase-config'
+
+function Signin() {
+    
+    const [loginEmail, setLoginEmail] = useState("")
+    const [loginPassword, setLoginPassword] = useState("")
+
+    const [user, setUser] = useState({})
+
+    let navigate = useNavigate();
+    onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    const login = async () => {
+      try{
+      const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword)
+      console.log(user)
+      navigate('/');
+      } catch (error) {
+        console.log(error.message)
+      }
+    };
+
+    const logout = async () => {
+      await signOut(auth)
+    };
+  
+
+    return (
+        <React.Fragment>
+        <div className="outerContainer">
+          <div className="container">
+            <h1>Sign-in</h1>
+              <input
+                type="text"
+                placeholder="E-mail address"
+                onChange={(event) => {
+                  setLoginEmail(event.target.value)
+                }}
+              />
+              <input
+                type="text"
+                placeholder="Password"
+                onChange={(event) => {
+                  setLoginPassword(event.target.value)
+                }}
+              />
+            <button type="submit" onClick={login} > Log in </button>
+
+            <div className="passrecover">
+              <p className="passrecover">Need help? <a>Recover your password here.</a></p>
+            </div>
+            <h5>OR</h5>
+            <Link to='/signup'><button type="submit">Sign up</button></Link>
+
+            <button type="submit" onClick={logout}> Sign out</button>
+            {user?.email}
+          </div>
+          </div>
+        </React.Fragment>
+
+
+    )
+
+
+}
+
+export default Signin;

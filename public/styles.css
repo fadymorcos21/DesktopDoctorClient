@@ -1,0 +1,408 @@
+/* ----------------HEADER----------------- */
+
+* {
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+}
+
+header {
+    background-color: #f5ba13;
+    margin: auto -16px;
+    padding: 16px 32px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+
+.navbar-brand{
+  font-family: Unica One;
+  font-size: 1.5em;
+}
+
+header h1 {
+    color: #fff;
+    font-family: "McLaren", cursive;
+    font-weight: 200;
+  }
+
+body {
+    background: #eee;
+    padding: 0 0px;
+
+  }
+
+a {
+      font-family: Kanit;
+      margin: 0 10px;
+      color: white;
+  }
+
+a:hover{
+  color: white;
+  text-decoration: none;
+
+
+}
+
+/* ----------------INTRO----------------- */
+
+
+.intro {
+  /* background-color: #019CDE; */
+  background-color: #088cdc;
+  /* height: 420px; */
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.section{
+  height: 36em;
+  background-color: red;
+  position: relative;
+}
+
+.navbar{
+  background-color: #088cdc;
+
+
+}
+
+hr{
+  margin: 0;
+  background-color: #BFBFBB;
+  /* background-color: #A8A8A8; */
+}
+
+.nav-item{
+  color: white;
+}
+
+.nav-item:visited, .nav-item:active, .nav-item:hover{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro-header{
+  /* display: block; */
+  text-align: center;
+  margin-top: 70px;
+  color: #eee;
+  font-family: bebas-kai,Tahoma,Arial,sans-serif;
+}
+
+
+
+.header{
+  text-align: center;
+  color: #F8F7FF;
+  font-family: bebas-kai,Tahoma,Arial,sans-serif;
+}
+
+.header-navbar{
+  /* text-align: center; */
+  background-color: #088cdc;
+  /* font-family: bebas-kai,Tahoma,Arial,sans-serif; */
+  padding: 0 15%;
+}
+
+.console{
+  margin-top: 50px;
+}
+
+.pc{
+  margin-top: 50px;
+}
+
+.phone{
+  margin-top: 50px;
+}
+
+.laptop{
+  margin-top: 50px;
+}
+
+
+h6{
+  /* display: block; */
+  text-align: center;
+  margin-top: 0px;
+  color: black;
+  font-family: bebas-kai,Tahoma,Arial,sans-serif;
+}
+
+
+.btn {
+  width: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 18px;
+  font-family: bebas-kai,Tahoma,Arial,sans-serif;
+  border-radius: 50px;
+
+}
+
+
+/* ----------------SECTION 1----------------- */
+
+.section1{
+  position: relative;
+  height: 180px;
+  width: 100%;
+  padding: 32px;
+  background-color: #001242;
+  text-align: center;
+}
+
+
+
+  .btn-section1{
+    background-color: #F8F7FF;
+    color: #001242;
+    font-family: bebas-kai, Tahoma, Arial,sans-serif;
+    padding: 10px;
+    margin: auto;
+
+    display: block;
+
+  }
+
+  .btn-group{
+    /* font-family: bebas-kai, Tahoma, Arial,sans-serif; */
+    /* padding: 10px; */
+    margin: 15px auto;
+    position: relative;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    /* display: block; */
+
+  }
+
+  .btn-section1:hover{
+    /* background-color: #F2E863; */
+    background-color: #ffc107;
+  }
+
+/* ----------------SECTION 2----------------- */
+
+
+.section2{
+  background-color: #F8F7FF;
+  height:1000px;
+  width: 100%;
+}
+
+.title-image{
+  width: 755px;
+  height: 900px;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 15%;
+}
+
+.section2 {
+  padding: 6% 15% 7%;
+}
+
+.heading-section2{
+  margin-top: 100px;
+  color: #001242;
+
+}
+
+
+
+.btn2-section2{
+  margin: 40px auto auto 0;
+  color: #001242;
+}
+
+
+
+.btn2-section2:hover{
+  background-color: #001242;
+}
+
+
+
+
+
+/* ---------------TESTIMONIALS SECTION 3----------------- */
+
+.section3{
+  height: 600px;
+  width: 100%;
+  /* padding: 4% 15% 6%; */
+  background-color: #088cdc;
+}
+
+/* #testimonials {
+  background-color: #ef8172;
+} */
+
+.carousel-item {
+  padding: 7% 15%;
+}
+
+.testimonial-text {
+  font-size: 40px;
+  line-height: 1.5;
+  color: #F8F7FF;
+  font-family: "Montserrat-Bold";
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/* --------------------SECTION 4-------------------- */
+
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+
+
+.section4 {
+  height: 520px;
+  width: 100%;
+  padding:8% 14% 0% 8%;
+  background-color: #F8F7FF;
+}
+
+.feature-box{
+  text-align: center;
+  color: #001242;
+}
+
+.copyright {
+  margin-top: 135px;
+  text-align: center;
+  color: #8f8f8f;
+}
+
+/* ----------------LOG IN----------------- */
+
+
+
+
+.container {
+  margin: 10% auto;
+  width: 500px;
+  padding: 100px 0;
+  border-width: 2px;
+  border-style: groove;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 40px;
+  font-weight: 200;
+  margin-bottom: 20px;
+
+}
+.container h5 {
+  font-weight: 200;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+
+input {
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.2);
+  width: 375px;
+  border-radius: 3px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  font-weight: 300;
+}
+
+button {
+  appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #50a3a2;
+  border-radius: 3px;
+  width: 375px;
+  font-size: 18px;
+}
+
+.signin {
+}
+
+.passrecover{
+  width: 375px;
+  margin: 5px auto;
+  margin-bottom: 20px;
+}
+.passrecover p{
+  text-align: left;
+}
+
+/* ----------------DEVICE SELECTION----------------- */
+
+.padthai {
+  padding: 5% 26%;
+  text-align: center;
+}
+
+.boxSize {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 17px;
+  height: 100px;
+  padding: 3%;
+}
+
+.padthai h2 {
+  font-size: 40px;
+  font-weight: 200;
+  margin-bottom: 90px;
+  margin-top: 70px;
+
+}
+
+.padthai h3 {
+  font-size: 30px;
+  font-weight: 200;
+  
+
+}
+
+.padthai h4 {
+  font-size: 28px;
+  font-weight: 200;
+  
+
+}
+
+/* ---------------------devicemodel------------------ */
+
+.lef{
+  text-align: left;
+}
