@@ -30,7 +30,7 @@ function Home() {
                     <h1 class="intro-header">Shedule a repair today</h1>
                     <h6>Now offering drop-off, mail-in and in-home repairs</h6>
 
-                    <Link to='/deviceselection'><button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <Link to='/info'><button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
                         Get started
                     </button></Link>
 

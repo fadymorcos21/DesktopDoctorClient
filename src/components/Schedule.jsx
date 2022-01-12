@@ -22,6 +22,9 @@ function Schedule() {
 
     const submitAppointment = () => {
         Axios.post("https://desktop-doctor.herokuapp.com/api/insert", {
+            fir: repairDetails.first,
+            las: repairDetails.last,
+            cel: repairDetails.phone,
             dev: repairDetails.deviceName,
             mod: repairDetails.deviceModel,
             rep: repairDetails.repairType,

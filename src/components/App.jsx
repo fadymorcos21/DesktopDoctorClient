@@ -9,11 +9,13 @@ import Model from "./Model";
 import Repairtype from "./Repairtype";
 import { ApptContext } from './ApptContext';
 import Schedule from "./Schedule";
+import Info from "./Info";
+
 
 
 
 function App(){
-  const [repairDetails, setRepairDetails] = useState({deviceName: "", deviceModel : "", repairType : "", service  : "", date : "something"});
+  const [repairDetails, setRepairDetails] = useState({first: "", last: "", phone: "", deviceName: "", deviceModel : "", repairType : "", service  : "", date : "something"});
 
 
   return (
@@ -28,6 +30,17 @@ function App(){
             <Route path="/repairtype" element={<Repairtype/>} />
             <Route path="/service" element={<Service/>} />
             <Route path="/schedule" element={<Schedule/>} />
+            {/* new */}
+            <Route path="/info" element={<Info/>} />
+            {/* <Route path="/booked" element={<Booked/>} />
+            possible can replace model
+            <Route path="/pc" element={<PC/>} />    
+            <Route path="/tablet" element={<Tablet/>} />            
+            <Route path="/cell" element={<Cell/>} />            
+            <Route path="/console" element={<Console/>} />
+            my repairs
+            <Route path="/myrepairs" element={<Myrepairs/>} /> */}
+
          </Routes>
          </ApptContext.Provider>
 

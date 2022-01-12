@@ -41,13 +41,7 @@ function Model() {
       </section>
 
     </>
-
-
   );
-
-
-
-
 }
 
 export default Model;
