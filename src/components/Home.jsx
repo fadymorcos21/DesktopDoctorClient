@@ -37,21 +37,21 @@ function Home() {
                     <div class="container-fluid">
 
                         <div class="row">
-                            <div class="feature-box col-lg-3 mysize" >
+                            <div class="feature-box col-lg-3 col-sm-3 mysize" >
                                 <div class="grouped-devices">
                                     <img class="console introimg" src="col11.png" alt="console" width="315" height="252" />
                                 </div>
                             </div>
-                            <div class="feature-box col-lg-3">
+                            <div class="feature-box col-lg-3 col-sm-3 ">
                                 <img class="pc introimg" src="col21.png" alt="pc" width="315" height="252" />
                             </div>
 
-                            <div class="feature-box col-lg-3">
+                            <div class="feature-box col-lg-3 col-sm-3 ">
                                 <img class="phone introimg" src="col31.png" alt="phone" width="292" height="252" />
 
                             </div>
 
-                            <div class="feature-box col-lg-3">
+                            <div class="feature-box col-lg-3 col-sm-3 ">
                                 <img class="laptop introimg" src="col41.png" alt="laptop" width="310" height="252" />
                             </div>
                         </div>
