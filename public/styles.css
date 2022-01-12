@@ -111,6 +111,11 @@ img {
   padding: 0 15%;
 }
 
+.rowIntro{
+  position: absolute;
+  bottom: 0;
+}
+
 .console{
   margin-top: 50px;
 }

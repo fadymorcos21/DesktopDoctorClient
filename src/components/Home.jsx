@@ -36,7 +36,7 @@ function Home() {
 
                     <div class="container-fluid">
 
-                        <div class="row">
+                        <div class="row rowIntro">
                             <div class="feature-box col-lg-3 mysize col-6" >
                                 <img class="console introimg" src="col11.png" alt="console" width="71%" />
                             </div>
