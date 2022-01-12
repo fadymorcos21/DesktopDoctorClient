@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { auth } from '../firebase-config'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
@@ -10,20 +10,20 @@ function Home() {
     const [loggedin, setloggedin] = useState(false);
 
     onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
+        setUser(currentUser);
     });
 
     const logout = async () => {
         await signOut(auth)
-      };
+    };
 
 
-    
+
     return (
         <React.Fragment>
-        <Header / >
+            <Header />
             <hr />
-            <div class="section" >
+            <section class="section" >
                 <div class="intro">
 
 
@@ -38,9 +38,7 @@ function Home() {
 
                         <div class="row">
                             <div class="feature-box col-lg-3 mysize col-6" >
-                                <div class="grouped-devices">
-                                    <img class="console introimg" src="col11.png" alt="console" width="71%"/>
-                                </div>
+                                <img class="console introimg" src="col11.png" alt="console" width="71%" />
                             </div>
                             <div class="feature-box col-lg-3 col-6">
                                 <img class="pc introimg" src="col21.png" alt="pc" width="71%" />
@@ -64,14 +62,14 @@ function Home() {
 
 
                 </div>
-            </div>
-            <div class="section1">
+            </section>
+            <section class="section1">
                 <h1 class="header">Can't to drop off? Explore solutions</h1>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                     <button type="button" class="btn btn-danger btn-section1">In-home repair</button>
                     <button type="button" class="btn btn-success btn-section1">Mail-In repair</button>
                 </div>
-            </div>
+            </section>
             <section class="section2" id="title">
 
 
@@ -172,7 +170,7 @@ function Home() {
                     </div>
                 </footer>
             </section>
-        
+
         </React.Fragment>
 
     );
