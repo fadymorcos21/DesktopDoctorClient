@@ -31,27 +31,27 @@ function Home() {
                     <h6>Now offering drop-off, mail-in and in-home repairs</h6>
 
                     <Link to='/info'><button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
-                        Get started1
+                        Get started
                     </button></Link>
 
                     <div class="container-fluid">
 
                         <div class="row">
-                            <div class="feature-box col-lg-3 mysize col-xs-3" >
+                            <div class="feature-box col-lg-3 mysize col-6" >
                                 <div class="grouped-devices">
                                     <img class="console introimg" src="col11.png" alt="console" width="71%" height="252" />
                                 </div>
                             </div>
-                            <div class="feature-box col-lg-3 col-xs-3">
+                            <div class="feature-box col-lg-3 col-6">
                                 <img class="pc introimg" src="col21.png" alt="pc" width="71%" height="252" />
                             </div>
 
-                            <div class="feature-box col-lg-3 col-xs-3">
+                            <div class="feature-box col-lg-3 col-6">
                                 <img class="phone introimg" src="col31.png" alt="phone" width="68%" height="83%" />
 
                             </div>
 
-                            <div class="feature-box col-lg-3 col-xs-3">
+                            <div class="feature-box col-lg-3 col-6">
                                 <img class="laptop introimg" src="col41.png" alt="laptop" width="70%" height="252" />
                             </div>
                         </div>
