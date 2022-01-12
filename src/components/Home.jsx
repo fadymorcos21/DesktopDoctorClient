@@ -31,13 +31,13 @@ function Home() {
                     <h6>Now offering drop-off, mail-in and in-home repairs</h6>
 
                     <Link to='/info'><button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
-                        Get started
+                        Get started1
                     </button></Link>
 
                     <div class="container-fluid">
 
                         <div class="row">
-                            <div class="feature-box col-lg-3 mysize col-xs-6" >
+                            <div class="feature-box col-lg-3 mysize col-xs-3" >
                                 <div class="grouped-devices">
                                     <img class="console introimg" src="col11.png" alt="console" width="71%" height="252" />
                                 </div>
