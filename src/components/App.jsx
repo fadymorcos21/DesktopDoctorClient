@@ -16,7 +16,7 @@ import Myrepairs from "./Myrepairs"
 
 
 function App(){
-  const [repairDetails, setRepairDetails] = useState({first: "", last: "", phone: "", deviceName: "", deviceModel : "", repairType : "", service  : "", date : "something"});
+  const [repairDetails, setRepairDetails] = useState({first: "", last: "", phone: "", deviceName: "", deviceModel : "", repairType : "", service  : "", date : "", time : ""});
 
 
   return (

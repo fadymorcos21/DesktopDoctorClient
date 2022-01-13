@@ -6,6 +6,7 @@ import Header from './Header'
 import { ApptContext } from "./ApptContext";
 import Axios from 'axios'
 import Dateslot from './Dateslot'
+import Timeslot from './Timeslot'
 
 
 function Schedule() {
@@ -91,6 +92,17 @@ function Schedule() {
         );
       }
 
+      let times = ["9:00", "9:30", "10:00", "10:00", "10:30", "11:00", "11:30", "12:00"];
+      function createTimeBooton(atime) {
+        return (
+          <Timeslot
+            time={atime}            
+          />
+        );
+      }
+
+
+      const [dateSelected, setDateSelected] = useState("")
     return (
         <>
             <Header />
@@ -99,17 +111,12 @@ function Schedule() {
                     <hr></hr>
                     <h2>Schedule a drop-off time</h2>
                     <div className="row">
-                        <div className="col-lg-12 lef"><h4>Available weekend dates:</h4></div>
+                        <div className="col-lg-12 lef"><h4>Select from available weekend dates:</h4></div>
                           {tmp.map(createBooton)}
                           <div className="col-lg-12 lef" style={{marginTop: '24px', marginBottom: '16px'}}><h4>Select available time:</h4></div>
-                          <a> 9:00</a>
-                          <a> 9:30</a>
-                          <a> 10:00</a>
-                          <a> 10:30</a>
-                          <a> 11:00</a>
-                          <a> 11:30</a>
-                          <a> 12:00</a>
-                          <div className="col-lg-12"><btn className="btn btn-primary" >Book Drop-off</btn></div>
+                            {times.map(createTimeBooton)}
+                          
+                          <div className="col-lg-10"><btn className="btn btn-primary" >Book {repairDetails.date} {repairDetails.time != "" && repairDetails.date !="" ? " at " + repairDetails.time : null}</btn></div>
                           
 
 

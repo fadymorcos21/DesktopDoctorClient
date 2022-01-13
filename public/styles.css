@@ -43,6 +43,7 @@ a:hover{
 
 }
 
+
 /* ----------------INTRO----------------- */
 
 
@@ -425,4 +426,11 @@ button {
 
 .lef{
   text-align: left;
+}
+
+.testu {
+  width: 90px;
+  background-color:  #eee;
+  color: black;
+  margin: 0 5px;
 }

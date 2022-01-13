@@ -36,16 +36,8 @@ function Device() {
                     </div>
                 </div>
             </section>
-            
-            </>
-            
-           
+        </>     
     );
-
-
-
-
 }
-
 
 export default Device;
