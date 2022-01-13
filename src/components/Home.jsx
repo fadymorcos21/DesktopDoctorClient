@@ -166,7 +166,7 @@ function Home() {
                         <i class="social-icon fab fa-twitter"></i>
                         <i class="social-icon fab fa-instagram"></i>
                         <i class="social-icon fas fa-envelope"></i> */}
-                        <p class="copyright">© Copyright 2021 Fady Moros</p>
+                        <p class="copyright">© Copyright 2022 Fady Moros</p>
                     </div>
                 </footer>
             </section>
