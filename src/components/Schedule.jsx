@@ -5,7 +5,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth'
 import Header from './Header'
 import { ApptContext } from "./ApptContext";
 import Axios from 'axios'
-// import Dropdown from 'react-bootstrap-dropdown';
+import Dateslot from './Dateslot'
 
 
 function Schedule() {
@@ -40,9 +40,11 @@ function Schedule() {
 
     const dummy = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0);
     const firstWeekDay = dummy.getDay()
-    for (var i = 1; i <= numOfDays; i++) {
+    var oneoftheweekdays;
+    for (var i = currentDate.getDate(); i <= numOfDays; i++) {
         if ((i + firstWeekDay) % 7 == 6 || (i + firstWeekDay) % 7 == 0) {
-            tmp.push([new Date(currentDate.getFullYear(), currentDate.getMonth(), i)])
+            const aweekday = new Date(currentDate.getFullYear(), currentDate.getMonth(), i)
+            tmp.push({theday : (i + firstWeekDay) % 7 == 6 ? "Sat" : "Sun", daynum : i, monthnum : aweekday.getMonth()+1})
             console.log(i)
         }
     }
@@ -75,14 +77,19 @@ function Schedule() {
         });
     };
 
-
-
-
-
-
-
-
     // Book the 11th year {year} thedate {thedate} day {day} hour {hour} minute {minute} utcday {utcday} mon {currentDate.getMonth()} OK
+
+
+    function createBooton(tm) {
+        return (
+          <Dateslot
+            day={tm.theday}
+            daynumber={tm.daynum}
+            month={tm.monthnum}
+            
+          />
+        );
+      }
 
     return (
         <>
@@ -92,75 +99,22 @@ function Schedule() {
                     <hr></hr>
                     <h2>Schedule a drop-off time</h2>
                     <div className="row">
-                        <div className="col-lg-12 lef"><h4>Available dates:</h4></div>
-                        {/* <Dropdown>
-                            <Dropdown.Toggle variant="success">
-                                Open Menu
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu>
-                                <Dropdown.Item href="#">
-                                    Apple
-                                </Dropdown.Item>
-                                <Dropdown.Item href="#">
-                                    Google
-                                </Dropdown.Item>
-                                <Dropdown.Item href="#">
-                                    Samsung
-                                </Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown> */}
-                        {/* <Dropdown>
-                            <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                Dropdown Button
-                            </Dropdown.Toggle>
+                        <div className="col-lg-12 lef"><h4>Available weekend dates:</h4></div>
+                          {tmp.map(createBooton)}
+                          <div className="col-lg-12 lef" style={{marginTop: '24px', marginBottom: '16px'}}><h4>Select available time:</h4></div>
+                          <a> 9:00</a>
+                          <a> 9:30</a>
+                          <a> 10:00</a>
+                          <a> 10:30</a>
+                          <a> 11:00</a>
+                          <a> 11:30</a>
+                          <a> 12:00</a>
+                          <div className="col-lg-12"><btn className="btn btn-primary" >Book Drop-off</btn></div>
+                          
 
-                            <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown> */}
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown button
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
 
-                        <button type="button" class="btn1 btn-primary col-lg-1" data-toggle="button" aria-pressed="false" autocomplete="off" >
-                            hi
-                        </button>
-                        <button type="button" class="btn1 btn-primary col-lg-1" data-toggle="button" aria-pressed="false" autocomplete="off">
-                            hi
-                        </button>
-                        <button type="button" class="btn1 btn-primary col-lg-1" data-toggle="button" aria-pressed="false" autocomplete="off">
-                            hi
-                        </button>
-                        <button type="button" class="btn1 btn-primary col-lg-1" data-toggle="button" aria-pressed="false" autocomplete="off">
-                            hi
-                        </button>
-                        <button type="button" class="btn1 btn-primary col-lg-1" data-toggle="button" aria-pressed="false" autocomplete="off">
-                            hi
-                        </button>
-                        <button type="button" class="btn1 btn-primary col-lg-1" data-toggle="button" aria-pressed="false" autocomplete="off">
-                            hi
-                        </button>
-                        <button type="button" class="btn1 btn-primary col-lg-1" data-toggle="button" aria-pressed="false" autocomplete="off">
-                            hi
-                        </button>
-                        <button type="button" class="btn1 btn-primary col-lg-1" data-toggle="button" aria-pressed="false" autocomplete="off">
-                            hi
-                        </button>
-                        <button type="button" class="btn1 btn-primary col-lg-1" data-toggle="button" aria-pressed="false" autocomplete="off">
-                            hi
-                        </button>
-                        <button type="button" class="btn1 btn-primary col-lg-1" data-toggle="button" aria-pressed="false" autocomplete="off">
-                            hi
-                        </button>
+
+                        
                     </div>
                 </div>
             </section>

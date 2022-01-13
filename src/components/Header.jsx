@@ -20,7 +20,7 @@ function Header() {
         <section class="header-navbar">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg navbar-dark ">
-                    <a class="navbar-brand" href="">Desktop Doctor</a>
+                    <Link to="/"><a class="navbar-brand" href="">Desktop Doctor</a></Link>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -28,16 +28,12 @@ function Header() {
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item" href="">
-                                <a>Repairs</a>
+                            <Link to="/myrepairs"><a>My Repairs</a></Link>
                             </li>
+                            
+                            
                             <li class="nav-item" href="">
-                                <a>All Services</a>
-                            </li>
-                            <li class="nav-item" href="">
-                                <a>Location</a>
-                            </li>
-                            <li class="nav-item" href="">
-                                <a>Help</a>
+                                <Link to="/help"><a>Help</a></Link>
                             </li>
                             {user === null
                                 ? <li class="nav-item" href="">

@@ -66,8 +66,8 @@ function Home() {
             <section class="section1">
                 <h1 class="header">Can't to drop off? Explore solutions</h1>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-danger btn-section1">In-home repair</button>
-                    <button type="button" class="btn btn-success btn-section1">Mail-In repair</button>
+                <Link to="info">
+                    <button type="button" class="btn btn-success btn-section1">Mail-In repair</button></Link>
                 </div>
             </section>
             <section class="section2" id="title">
@@ -77,7 +77,7 @@ function Home() {
 
                     <div class="col-lg-6">
                         <h1 class="heading-section2">60-minute phone screen repairs offered for a variety of phone brands.</h1>
-                        <button type="button" class="btn btn-outline-dark btn-lg download-button btn2-section2">Book Now</button>
+                        <Link to='/info'><button type="button" class="btn btn-outline-dark btn-lg download-button btn2-section2">Book Now</button></Link>
                     </div>
 
                     <div class="col-lg-6">

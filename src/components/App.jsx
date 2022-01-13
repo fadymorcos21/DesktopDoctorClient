@@ -10,7 +10,8 @@ import Repairtype from "./Repairtype";
 import { ApptContext } from './ApptContext';
 import Schedule from "./Schedule";
 import Info from "./Info";
-
+import Help from "./Help";
+import Myrepairs from "./Myrepairs"
 
 
 
@@ -32,14 +33,16 @@ function App(){
             <Route path="/schedule" element={<Schedule/>} />
             {/* new */}
             <Route path="/info" element={<Info/>} />
+            <Route path="/Help" element={<Help/>} />
+
             {/* <Route path="/booked" element={<Booked/>} />
             possible can replace model
             <Route path="/pc" element={<PC/>} />    
             <Route path="/tablet" element={<Tablet/>} />            
             <Route path="/cell" element={<Cell/>} />            
             <Route path="/console" element={<Console/>} />
-            my repairs
-            <Route path="/myrepairs" element={<Myrepairs/>} /> */}
+            my repairs */}
+            <Route path="/myrepairs" element={<Myrepairs/>} />
 
          </Routes>
          </ApptContext.Provider>
