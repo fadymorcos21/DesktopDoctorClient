@@ -5,7 +5,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth'
 import Header from './Header'
 import { ApptContext } from "./ApptContext";
 import Axios from 'axios'
-import Dropdown from 'react-bootstrap/Dropdown';
+import Dropdown from 'react-bootstrap-dropdown';
 
 
 function Schedule() {
@@ -93,7 +93,7 @@ function Schedule() {
                     <h2>Schedule a drop-off time</h2>
                     <div className="row">
                         <div className="col-lg-12 lef"><h4>Available dates:</h4></div>
-                        <Dropdown>
+                        {/* <Dropdown>
                             <Dropdown.Toggle variant="success">
                                 Open Menu
                             </Dropdown.Toggle>
@@ -107,6 +107,17 @@ function Schedule() {
                                 <Dropdown.Item href="#">
                                     Samsung
                                 </Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown> */}
+                        <Dropdown>
+                            <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                Dropdown Button
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
 
