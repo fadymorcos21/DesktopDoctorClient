@@ -5,7 +5,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth'
 import Header from './Header'
 import { ApptContext } from "./ApptContext";
 import Axios from 'axios'
-import Dropdown from 'react-bootstrap-dropdown';
+// import Dropdown from 'react-bootstrap-dropdown';
 
 
 function Schedule() {
@@ -109,7 +109,7 @@ function Schedule() {
                                 </Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown> */}
-                        <Dropdown>
+                        {/* <Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                                 Dropdown Button
                             </Dropdown.Toggle>
@@ -119,7 +119,7 @@ function Schedule() {
                                 <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
                                 <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
                             </Dropdown.Menu>
-                        </Dropdown>
+                        </Dropdown> */}
 
                         <button type="button" class="btn1 btn-primary col-lg-1" data-toggle="button" aria-pressed="false" autocomplete="off" >
                             hi
