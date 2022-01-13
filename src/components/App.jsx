@@ -12,6 +12,7 @@ import Schedule from "./Schedule";
 import Info from "./Info";
 import Help from "./Help";
 import Myrepairs from "./Myrepairs"
+import Confirm from "./Confirm"
 
 
 
@@ -34,6 +35,7 @@ function App(){
             {/* new */}
             <Route path="/info" element={<Info/>} />
             <Route path="/Help" element={<Help/>} />
+            <Route path="/confirm" element={<Confirm/>} />
 
             {/* <Route path="/booked" element={<Booked/>} />
             possible can replace model

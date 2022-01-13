@@ -23,7 +23,8 @@ function Schedule() {
 
     const { repairDetails, setRepairDetails } = useContext(ApptContext);
     const currentDate = new Date();
-
+    
+    
     function daysInThisMonth() {
         var now = new Date();
         return new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
@@ -63,20 +64,7 @@ function Schedule() {
     // const utcday = currentDate.getUTCDay();
 
 
-    const submitAppointment = () => {
-        Axios.post("https://desktop-doctor.herokuapp.com/api/insert", {
-            fir: repairDetails.first,
-            las: repairDetails.last,
-            cel: repairDetails.phone,
-            dev: repairDetails.deviceName,
-            mod: repairDetails.deviceModel,
-            rep: repairDetails.repairType,
-            ser: repairDetails.service,
-            dat: repairDetails.date
-        }).then(() => {
-            alert("successful insert");
-        });
-    };
+    
 
     // Book the 11th year {year} thedate {thedate} day {day} hour {hour} minute {minute} utcday {utcday} mon {currentDate.getMonth()} OK
 
@@ -103,6 +91,7 @@ function Schedule() {
 
 
       const [dateSelected, setDateSelected] = useState("")
+      console.log(repairDetails);
     return (
         <>
             <Header />
@@ -116,7 +105,7 @@ function Schedule() {
                           <div className="col-lg-12 lef" style={{marginTop: '24px', marginBottom: '16px'}}><h4>Select available time:</h4></div>
                             {times.map(createTimeBooton)}
                           
-                          <div className="col-lg-10"><btn className="btn btn-primary" >Book {repairDetails.date} {repairDetails.time != "" && repairDetails.date !="" ? " at " + repairDetails.time : null}</btn></div>
+                          <Link to="/confirm"><div className="col-lg-10" ><button className="btn btn-primary">Book {repairDetails.date} {repairDetails.time != "" && repairDetails.date !="" ? " at " + repairDetails.time : null}</button></div></Link>
                           
 
 
