@@ -14,8 +14,6 @@ import Help from "./Help";
 import Myrepairs from "./Myrepairs"
 import Confirm from "./Confirm"
 import Booked from "./Booked"
-import Ddmenu from "./Ddmenu" 
-// delete later just for testing ^
 
 
 
