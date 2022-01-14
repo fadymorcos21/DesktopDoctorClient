@@ -74,7 +74,7 @@ function Info() {
                   setLast(event.target.value)
                 }}
               /></div>
-              <div className="col-lg-12 lef"><h4>Last name?</h4></div>
+              <div className="col-lg-12 lef"><h4>Phone number?</h4></div>
             <div className="col-lg-12 lef"><input style={{
               textAlign: 'left',
               marginLeft: 0,

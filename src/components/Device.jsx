@@ -28,11 +28,13 @@ function Device() {
                 <hr></hr>
                 <h2>Which device do you need to fix?</h2>
                     <div className="row">
-                        <div className="col-lg-4 boxSize"><Link to='/devicemodel'><button  type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"
-                        onClick={() => setRepairDetails({ ...repairDetails, deviceName : "PC"})}>PC</button></Link></div>
-                        <div className="col-lg-4 boxSize"><Link to='/devicemodel'><h3 onClick={() => setRepairDetails({ ...repairDetails, deviceName : "Tablet"})}>Tablet</h3></Link></div>
-                        <div className="col-lg-4 boxSize"><Link to='/devicemodel'><h3 onClick={() => setRepairDetails({ ...repairDetails, deviceName : "Phone"})}>Phone</h3></Link></div>
-                        <div className="col-lg-4 boxSize"><Link to='/devicemodel'><h3 onClick={() => setRepairDetails({ ...repairDetails, deviceName : "Console"})}>Console</h3></Link></div>
+                      
+
+                    <Link className="col-lg-6 boxSize" to='/devicemodel'><button className="col-lg-12 special" onClick={() => setRepairDetails({ ...repairDetails, repairType : "Drop-off"})} >Computer</button></Link>
+                    <Link className="col-lg-6 boxSize" to='/devicemodel'><button className="col-lg-12 special" onClick={() => setRepairDetails({ ...repairDetails, repairType : "Drop-off"})} >Tablet</button></Link>
+                    <Link className="col-lg-6 boxSize" to='/devicemodel'><button className="col-lg-12 special" onClick={() => setRepairDetails({ ...repairDetails, repairType : "Drop-off"})} >Phone</button></Link>
+                    <Link className="col-lg-6 boxSize" to='/devicemodel'><button className="col-lg-12 special" onClick={() => setRepairDetails({ ...repairDetails, repairType : "Drop-off"})} >Game console</button></Link>
+
                     </div>
                 </div>
             </section>

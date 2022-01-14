@@ -27,9 +27,9 @@ function Repairtype() {
                 <hr></hr>
                 <h2>How do you want to get your device repaired?</h2>
                     <div className="row">
-                        <div className="col-lg-4 boxSize"><Link to='/service'><h3 onClick={() => setRepairDetails({ ...repairDetails, repairType : "Drop-off"})} >Drop-off</h3></Link></div>
-                        <div className="col-lg-4 boxSize"><Link to='/service'><h3 onClick={() => setRepairDetails({ ...repairDetails, repairType : "In-home"})} >In-home</h3></Link></div>
-                        <div className="col-lg-4 boxSize"><Link to='/service'><h3 onClick={() => setRepairDetails({ ...repairDetails, repairType : "Mail-in"})} >Mail-in</h3></Link></div>
+                    <Link className="col-lg-6 boxSize" to='/service'><button className="col-lg-12 special" onClick={() => setRepairDetails({ ...repairDetails, repairType : "Drop-off"})} >Drop-off</button></Link>
+                    <Link className="col-lg-6 boxSize" to='/service'><button className="col-lg-12 special" onClick={() => setRepairDetails({ ...repairDetails, repairType : "Drop-off"})} >Mail-in</button></Link>
+                    
                     </div>
                 </div>
             </section>
