@@ -80,7 +80,7 @@ function Schedule() {
     );
   }
 
-  let times = ["9:00", "9:30", "10:00", "10:00", "10:30", "11:00", "11:30", "12:00"];
+  var times = ["9:00", "9:30", "10:00", "10:00", "10:30", "11:00", "11:30", "12:00"];
   function createTimeBooton(atime) {
     return (
       <Timeslot
@@ -91,14 +91,31 @@ function Schedule() {
 
 
   const [dateSelected, setDateSelected] = useState("")
-  console.log(repairDetails);
+  const[availableTimes, setAvailableTimes]= useState(times);
+  const[datesBooked, setDatesBooked]= useState([]);
+
 
   useEffect(() => {
     Axios.get('https://desktop-doctor.herokuapp.com/api/get').then((response)=>{
+      setDatesBooked(response.data);
       console.log(response.data);
+
     });
   }, []);
 
+
+  useEffect(() => {
+    let empty = [];
+    for (var i = 0; i < datesBooked.length; i++){
+      if (datesBooked[i].date === repairDetails.date){
+        empty.push(datesBooked[i].time)
+      }
+    }
+    times = times.filter( ( el ) => !empty.includes( el ) );
+    setAvailableTimes(times); 
+  }, [repairDetails.date]);
+
+  console.log(repairDetails);
 
   return (
     <>
@@ -111,9 +128,9 @@ function Schedule() {
             <div className="col-lg-12 lef"><h4>Select from available weekend dates:</h4></div>
             {tmp.map(createBooton)}
             <div className="col-lg-12 lef" style={{ marginTop: '24px', marginBottom: '16px' }}><h4>Select available time:</h4></div>
-            {times.map(createTimeBooton)}
+            {availableTimes.map(createTimeBooton)}
 
-            <Link to="/confirm"><div className="col-lg-10" ><button className="btn btn-primary">Book {repairDetails.date} {repairDetails.time != "" && repairDetails.date != "" ? " at " + repairDetails.time : null}</button></div></Link>
+            <div className="col-lg-10" ><Link to="/confirm"><button className="btn btn-primary">Book {repairDetails.date} {repairDetails.time != "" && repairDetails.date != "" ? " at " + repairDetails.time : null}</button></Link></div>
 
 
 

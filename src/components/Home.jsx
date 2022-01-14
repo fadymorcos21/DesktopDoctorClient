@@ -28,10 +28,10 @@ function Home() {
 
 
                     <h1 class="intro-header">Shedule a repair today</h1>
-                    <h6>Now offering drop-off, mail-in and in-home repairs</h6>
+                    <h6>Now offering drop-off, and in-home repairs</h6>
 
                     <Link to='/info'><button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
-                        Get started
+                        Book a free diagnoses
                     </button></Link>
 
                     <div class="container-fluid">
@@ -67,7 +67,7 @@ function Home() {
                 <h1 class="header">Can't to drop off? Explore solutions</h1>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                 <Link to="info">
-                    <button type="button" class="btn btn-success btn-section1">Mail-In repair</button></Link>
+                    <button type="button" class="btn btn-success btn-section1">In-home repair</button></Link>
                 </div>
             </section>
             <section class="section2" id="title">
