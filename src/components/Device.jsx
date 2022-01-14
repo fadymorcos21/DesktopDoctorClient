@@ -30,10 +30,10 @@ function Device() {
                     <div className="row">
                       
 
-                    <Link className="col-lg-6 boxSize" to='/devicemodel'><button className="col-lg-12 special" onClick={() => setRepairDetails({ ...repairDetails, repairType : "Drop-off"})} >Computer</button></Link>
-                    <Link className="col-lg-6 boxSize" to='/devicemodel'><button className="col-lg-12 special" onClick={() => setRepairDetails({ ...repairDetails, repairType : "Drop-off"})} >Tablet</button></Link>
-                    <Link className="col-lg-6 boxSize" to='/devicemodel'><button className="col-lg-12 special" onClick={() => setRepairDetails({ ...repairDetails, repairType : "Drop-off"})} >Phone</button></Link>
-                    <Link className="col-lg-6 boxSize" to='/devicemodel'><button className="col-lg-12 special" onClick={() => setRepairDetails({ ...repairDetails, repairType : "Drop-off"})} >Game console</button></Link>
+                    <Link className="col-lg-6 boxSize" to='/devicemodel' onClick={() => setRepairDetails({ ...repairDetails, deviceName : "Computer"})}><button className="col-lg-12 special"  >Computer</button></Link>
+                    <Link className="col-lg-6 boxSize" to='/devicemodel' onClick={() => setRepairDetails({ ...repairDetails, deviceName : "Tablet"})}><button className="col-lg-12 special"  >Tablet</button></Link>
+                    <Link className="col-lg-6 boxSize" to='/devicemodel' onClick={() => setRepairDetails({ ...repairDetails, deviceName : "Phone"})}><button className="col-lg-12 special"  >Phone</button></Link>
+                    <Link className="col-lg-6 boxSize" to='/devicemodel' onClick={() => setRepairDetails({ ...repairDetails, deviceName : "Console"})}><button className="col-lg-12 special"  >Game console</button></Link>
 
                     </div>
                 </div>

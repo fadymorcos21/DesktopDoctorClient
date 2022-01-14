@@ -14,6 +14,8 @@ import Help from "./Help";
 import Myrepairs from "./Myrepairs"
 import Confirm from "./Confirm"
 import Booked from "./Booked"
+import Ddmenu from "./Ddmenu" 
+// delete later just for testing ^
 
 
 
@@ -38,6 +40,9 @@ function App(){
             <Route path="/Help" element={<Help/>} />
             <Route path="/confirm" element={<Confirm/>} />
             <Route path="/booked" element={<Booked/>} />
+            <Route path="/ddmenu" element={<Ddmenu/>} />
+
+            // delete later just for testing ^
 
             {/* <Route path="/booked" element={<Booked/>} />
             possible can replace model

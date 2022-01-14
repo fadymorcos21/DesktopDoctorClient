@@ -27,9 +27,10 @@ function Service() {
                 <hr></hr>
                 <h2>How do you want to get your device repaired?</h2>
                     <div className="row">
-                        <div className="col-lg-4 boxSize"><Link to='/schedule'><h3 onClick={() => setRepairDetails({ ...repairDetails, service : "Screen"})} >Broken Screen</h3></Link></div>
-                        <div className="col-lg-4 boxSize"><Link to='/schedule'><h3 onClick={() => setRepairDetails({ ...repairDetails, service : "Water"})} >Water Damage</h3></Link></div>
-                        <div className="col-lg-4 boxSize"><Link to='/schedule'><h3 onClick={() => setRepairDetails({ ...repairDetails, service : "Battery"})} >Battery</h3></Link></div>
+                    <Link className="col-lg-4 boxSize" to='/schedule' onClick={() => setRepairDetails({ ...repairDetails, service : "Screen"})}><button className="col-lg-12 special"  >Cracked Screen</button></Link>
+                    <Link className="col-lg-4 boxSize" to='/schedule' onClick={() => setRepairDetails({ ...repairDetails, service : "Water"})}><button className="col-lg-12 special"  >Water Damage</button></Link>
+                    <Link className="col-lg-4 boxSize" to='/schedule' onClick={() => setRepairDetails({ ...repairDetails, service : "Battery"})}><button className="col-lg-12 special"  >Battery</button></Link>
+
                     </div>
                 </div>
             </section>

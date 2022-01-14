@@ -455,3 +455,28 @@ button {
   margin: 0 5px;
 }
 
+/* ---------------------DDmenu------------------ */
+
+.ddbtn{
+  width: 300px;
+  padding: 10px;
+  margin: 0;
+  display:block;
+  text-align: lef;
+  margin-top: 18px;
+  font-family: bebas-kai,Tahoma,Arial,sans-serif;
+  border-radius: 10px;
+
+}
+
+
+/* .btn {
+  width: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 18px;
+  font-family: bebas-kai,Tahoma,Arial,sans-serif;
+  border-radius: 50px;
+
+} */
