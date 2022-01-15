@@ -64,7 +64,7 @@ function Home() {
                 </div>
             </section>
             <section class="section1">
-                <h1 class="header">Can't to drop off? Explore solutions</h1>
+                <h1 class="header">Can't to drop off? In-home repairs are offered, call to book</h1>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                 <Link to="info">
                     <button type="button" class="btn btn-success btn-section1">In-home repair</button></Link>
