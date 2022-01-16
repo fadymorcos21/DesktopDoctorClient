@@ -26,7 +26,7 @@ header h1 {
   }
 
 body {
-    background: #eee;
+    background: #F8F7FF;
     padding: 0 0px;
 
   }
@@ -46,6 +46,8 @@ a:hover{
 
 
 /* ----------------INTRO----------------- */
+
+
 
 
 .intro {
@@ -120,6 +122,24 @@ img {
 .rowIntro{
   position: absolute;
   bottom: 0;
+}
+
+.car1 {
+  position: relative;
+  bottom: 0;
+  padding: 0%;
+}
+
+
+
+.carimg{
+  position: relative;
+  bottom: 100px;
+  width: 50%;
+}
+
+.active{
+  padding: 0%;
 }
 
 .console{
@@ -221,17 +241,13 @@ h6{
   width: 100%;
 }
 
-.title-image{
-  width: 755px;
-  height: 900px;
-  transform: rotate(25deg);
-  position: absolute;
-  right: 15%;
-}
-
 .section2 {
   padding: 6% 15% 7%;
 }
+
+
+
+
 
 .heading-section2{
   margin-top: 100px;
@@ -263,6 +279,14 @@ h6{
   width: 100%;
   /* padding: 4% 15% 6%; */
   background-color: #088cdc;
+}
+
+.title-image{
+  width: 755px;
+  /* height: 900px; */
+  transform: rotate(25deg);
+  position: absolute;
+  right: 15%;
 }
 
 /* #testimonials {
@@ -482,9 +506,39 @@ button:focus {
 
 .testu {
   width: 90px;
-  background-color:  #eee;
+  background: #F8F7FF;
   color: black;
   margin: 0 5px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+
+}
+.testu:hover {
+  width: 90px;
+  background: #eee;
+  color: black;
+  margin: 0 5px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.testu:focus {
+  width: 90px;
+  background: #eee;
+  color: black;
+  margin: 0 5px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+
 }
 
 /* ---------------------DDmenu------------------ */
@@ -512,3 +566,148 @@ button:focus {
   border-radius: 50px;
 
 } */
+
+.introimg {
+  width: 70%;
+}
+
+@media (max-width: 3043px){
+  .introimg {
+    width: 43%;
+  }
+}
+
+@media (max-width: 2175px){
+  .introimg {
+    width: 67%;
+  }
+}
+@media (max-width: 1575px){
+  .introimg {
+    width: 85%;
+  }
+}
+
+/* @media (max-width: 989px){
+  .introimg {
+    width: 45%;
+  }
+} */
+
+
+@media (max-width: 1570px) {
+  .iphones{
+    position: relative;
+    left: 200px;;
+  }
+}
+
+@media (max-width: 1175px) {
+  .testimonial-text {
+    font-size: 26px;
+  }
+  
+  .section3 {
+    height: 500px;
+    padding-top: 3%;
+    /* padding-bottom: 10%; */
+  
+  }
+}
+
+@media (max-width: 991px) {
+
+  #title {
+    text-align: center;
+  }
+
+  .iphones{
+    position: relative;
+    left: 0px;;
+  }
+
+  .ds {
+    text-align: center;
+    margin: auto;
+  }
+
+  
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+    text-align: center;
+    width: 100%;
+  }
+
+  .section2 {
+    height: 1160px;
+  }
+}
+
+
+
+
+@media (max-width: 850px) {
+  .section2{
+    height: 1020px;
+  }
+
+  .testimonial-text {
+    font-size: 29px;
+  }
+
+  .section3 {
+    height: 650px;
+    padding-top: 10%;
+    /* padding-bottom: 10%; */
+
+  }
+
+}
+
+@media (max-width: 580px) {
+  .section2{
+    height: 730px;
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+  }
+
+  .section3 {
+    height: 500px;
+    padding-top: 10%;
+    /* padding-bottom: 10%; */
+
+  }
+}
+
+@media (max-width: 440px) {
+  .section2{
+    height: 650px;
+  }
+
+  .testimonial-text {
+    font-size: 18px;
+  }
+  
+  .section3 {
+    height: 500px;
+    padding-top: 5%;
+    /* padding-bottom: 10%; */
+  
+  }
+
+  .carimg{
+    position: relative;
+    bottom: 40px;
+    width: 100%;
+  }
+
+}
+
+
+
+
+

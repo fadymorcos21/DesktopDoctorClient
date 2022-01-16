@@ -53,89 +53,135 @@ function Home() {
 
 
                     {user === null
-                        ? <Link to='/info'><button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
+                        ? <Link to='/info'><button type="button" class="btn  btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
                             Book a free diagnoses
                         </button></Link>
-                        : <Link to='/deviceselection'><button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
+                        : <Link to='/deviceselection'><button type="button" class="btn  btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
                             Book a free diagnoses
                         </button></Link>
                     }
 
-                    <div class="container-fluid">
 
-                        <div class="row rowIntro">
-                            <div class="feature-box col-lg-3 mysize col-6" >
-                                <img class="console introimg" src="col11.png" alt="console" width="71%" />
-                            </div>
-                            <div class="feature-box col-lg-3 col-6">
-                                <img class="pc introimg" src="col21.png" alt="pc" width="71%" />
-                            </div>
+                    {/* z-depth-1-half car1 */}
+                    {winWidth < 991
+                        ? <div id="carouselExampleIndicators" class="carousel slide car1 cook"  data-interval="2500" data-ride="carousel">
 
-                            <div class="feature-box col-lg-3 col-6">
-                                <img class="phone introimg" src="col31.png" alt="phone" width="68%" />
+                            <div class="carousel-inner">
+                                <div class="carousel-item active cook">
 
-                            </div>
+                                    <img class="pc  carimg" src="col21.png" alt="pc" width="71%" />
 
-                            <div class="feature-box col-lg-3 col-6">
-                                <img class="laptop introimg" src="col41.png" alt="laptop" width="70%" />
+                                </div>
+                                <div class="carousel-item">
+
+                                    <img class="laptop  carimg" src="col41.png" alt="laptop" width="70%" />
+
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="phone  carimg" src="col31.png" alt="phone" width="68%" />
+
+
+                                </div>
+                                <div class="carousel-item">
+
+                                    <img class="console  carimg" src="col11.png" alt="console" width="71%" />
+
+                                </div>
                             </div>
+                            
+
                         </div>
 
 
+
+                        : <div class="container-fluid">
+                            <div class="row rowIntro">
+                                <div class="feature-box col-lg-3 mysize col-6" >
+                                    <img class="console introimg" src="col11.png" alt="console" width="71%" />
+                                </div>
+                                <div class="feature-box col-lg-3 col-6">
+                                    <img class="pc introimg" src="col21.png" alt="pc" width="71%" />
+                                </div>
+
+                                <div class="feature-box col-lg-3 col-6">
+                                    <img class="phone introimg" src="col31.png" alt="phone" width="68%" />
+
+                                </div>
+
+                                <div class="feature-box col-lg-3 col-6">
+                                    <img class="laptop introimg" src="col41.png" alt="laptop" width="70%" />
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+
+
+
+
+
+
+                </div>
+            </section>
+
+
+            {winWidth < 580
+                ? <section className="section1">
+                    <h5 className="header">Can't to drop off? In-home repairs are offered, call to book</h5>
+                    <div className="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <a className="col-lg-12" href="tel:6472000964"><button type="button" class="btn btn-success btn-section1">Call Now</button></a>
+
                     </div>
+                </section>
+                : <section class="section1">
+                    <h2 className="header">Can't to drop off? In-home repairs are offered, call to book</h2>
+                    <div className="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <a className="col-lg-12" href="tel:6472000964"><button type="button" class="btn btn-success btn-section1">Call Now</button></a>
 
-
-
-
-
-                </div>
-            </section>
-
-
-            {winWidth < 580 
-            ? <section className="section1">
-                <h5 className="header">Can't to drop off? In-home repairs are offered, call to book</h5>
-                <div className="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <a className="col-lg-12" href="tel:6472000964"><button type="button" class="btn btn-success btn-section1">Call Now</button></a>
-
-                </div>
-            </section>
-            : <section class="section1">
-                <h2 className="header">Can't to drop off? In-home repairs are offered, call to book</h2>
-                <div className="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <a className="col-lg-12" href="tel:6472000964"><button type="button" class="btn btn-success btn-section1">Call Now</button></a>
-
-                </div>
-            </section>
+                    </div>
+                </section>
             }
-            {/* <section class="section1">
-                <h2 className="header">Can't to drop off? In-home repairs are offered, call to book</h2>
-                <div className="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <a className="col-lg-12" href="tel:6472000964"><button type="button" class="btn btn-success btn-section1">Call Now</button></a>
 
-                </div>
-            </section> */}
 
-            <section className="section2" id="title">
-                <div className="row">
-                    <div className="col-lg-6">
-                        <h1 className="heading-section2">60-minute phone screen repairs offered for a variety of phone brands.</h1>
 
-                        {user === null
-                            ? <Link to='/info'><button type="button" class="btn btn-outline-dark btn-lg download-button btn2-section2">Book Now</button></Link>
-                            : <Link to='/deviceselection'><button type="button" class="btn btn-outline-dark btn-lg download-button btn2-section2">Book Now</button></Link>
-                        }
+
+            {winWidth < 580
+                ? <section className="section2" id="title">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <h5 className="heading-section2">60-minute phone screen repairs offered for a variety of phone brands.</h5>
+
+                            {user === null
+                                ? <Link to='/info'><button type="button" class="btn ds btn-outline-dark btn-lg download-button btn2-section2">Book Now</button></Link>
+                                : <Link to='/deviceselection'><button type="button" class="btn ds btn-outline-dark btn-lg download-button btn2-section2">Book Now</button></Link>
+                            }
+                        </div>
+
+                        <div className="col-lg-6 iphones">
+                            <img className="title-image" src="iPhone4.png"></img>
+                        </div>
                     </div>
+                </section>
+                : <section className="section2" id="title">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <h1 className="heading-section2">60-minute phone screen repairs offered for a variety of phone brands.</h1>
 
-                    <div class="col-lg-6">
-                        <img class="title-image" src="iPhone4.png"></img>
+                            {user === null
+                                ? <Link to='/info'><button type="button" class="btn ds btn-outline-dark btn-lg download-button btn2-section2">Book Now</button></Link>
+                                : <Link to='/deviceselection'><button type="button" class="btn ds btn-outline-dark btn-lg download-button btn2-section2">Book Now</button></Link>
+                            }
+                        </div>
+
+                        <div className="col-lg-6 iphones">
+                            <img className="title-image" src="iPhone4.png"></img>
+                        </div>
                     </div>
+                </section>}
 
 
 
-                </div>
-
-            </section>
             <section class="section3">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
@@ -180,9 +226,12 @@ function Home() {
                     </a>
                 </div>
             </section>
+
+
+
+
             <section class="section4">
                 <div class="container-fluid">
-
                     <div class="row">
                         <div class="feature-box col-lg-4">
                             <i class="icon fas fa-check-circle fa-4x"></i>
@@ -202,20 +251,13 @@ function Home() {
                             <p>Get free problem assessing and quotation</p>
                         </div>
                     </div>
-
-
-
                 </div>
 
-                <footer class="white-section" id="footer">
+                <div >
                     <div class="container-fluid">
-                        {/* <i class="social-icon fab fa-facebook-f"></i>
-                        <i class="social-icon fab fa-twitter"></i>
-                        <i class="social-icon fab fa-instagram"></i>
-                        <i class="social-icon fas fa-envelope"></i> */}
                         <p class="copyright">© Copyright 2022 Fady Moros</p>
                     </div>
-                </footer>
+                </div>
             </section>
 
         </React.Fragment>

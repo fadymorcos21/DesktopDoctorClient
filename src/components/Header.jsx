@@ -45,7 +45,6 @@ function Header() {
                                 <Link to='/'><a onClick={logout}>Sign Out</a></Link>
                             </li>}
 
-
                         </ul>
                     </div>
                 </nav>

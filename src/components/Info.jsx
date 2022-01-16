@@ -31,6 +31,7 @@ function Info() {
   const [last, setLast] = useState("");
   const [cellNum, setCellNum] = useState("");
 
+  const [errorMessage, setErrorMessage] = useState("");
 
 
   return (
@@ -92,14 +93,16 @@ function Info() {
               }}
             /></div>
 
-            <div className="col-lg-12 lef"><h6 className="col-lg-12 lef"> OR <Link to='/signin' style={{color: 'black', margin:'0'}}>sign-in</Link> to be able to track your repairs</h6></div>
+            <h6 className="col-lg-12 lef"> OR <Link to='/signin' style={{color: 'black', margin:'0'}}>sign-in</Link> to be able to track your repairs</h6>
 
-            <div className="col-lg-12"><Link to='/deviceselection'><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"
-              onClick={() => setRepairDetails({ ...repairDetails, first: first, last: last, phone: cellNum })}>
-
-
-              Continue
-            </button></Link></div>
+              <h6 style={{color: 'red'}} className="lef">{errorMessage}</h6>
+            {first === "" || last === "" || cellNum.length !== 10
+            ? <div className="col-lg-12"><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"
+              onClick={() => setErrorMessage("You must enter a name and a 10-digit phone number")}>Continue</button></div>
+            : <div className="col-lg-12"><Link to='/deviceselection'><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"
+              onClick={() => setRepairDetails({ ...repairDetails, first: first, last: last, phone: cellNum })}>Continue</button></Link></div>
+            }
+            
             {/* last : last, phone : cellNum */}
           </div>
         </div>

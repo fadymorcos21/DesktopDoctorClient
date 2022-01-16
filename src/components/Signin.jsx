@@ -12,6 +12,8 @@ function Signin() {
 
     const [user, setUser] = useState({})
 
+    const [errMess, setErrMess] = useState("")
+
     let navigate = useNavigate();
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -25,6 +27,7 @@ function Signin() {
       setRepairDetails({...repairDetails, email : loginEmail})
       } catch (error) {
         console.log(error.message)
+        setErrMess("Email or password is incorrect")
       }
     };
 
@@ -56,6 +59,8 @@ function Signin() {
                   setLoginPassword(event.target.value)
                 }}
               />
+
+              <h6 style={{color: 'red'}}>{errMess}</h6>
             <button type="submit" onClick={login} > Log in </button>
 
             <div className="passrecover">
