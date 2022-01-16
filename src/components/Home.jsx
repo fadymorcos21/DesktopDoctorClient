@@ -9,7 +9,7 @@ import { ApptContext } from "./ApptContext";
 function Home() {
 
 
-    
+
     const [user, setUser] = useState({})
     const [loggedin, setloggedin] = useState(false);
 
@@ -26,6 +26,18 @@ function Home() {
     // useEffect()
 
     console.log(repairDetails)
+
+    function useWindowSize() {
+        const [winWidth, setWinWidth] = useState(window.innerWidth);
+        useEffect(() => {
+            const handleResize = () => {
+                setWinWidth(window.innerWidth)
+            };
+            window.addEventListener("resize", handleResize);
+        }, [])
+        return winWidth;
+    }
+    const winWidth = useWindowSize();
 
     return (
         <React.Fragment>
@@ -78,25 +90,41 @@ function Home() {
 
                 </div>
             </section>
-            <section class="section1">
-                <h2 class="header">Can't to drop off? In-home repairs are offered, call to book</h2>
-                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+
+
+            {winWidth < 580 
+            ? <section className="section1">
+                <h5 className="header">Can't to drop off? In-home repairs are offered, call to book</h5>
+                <div className="btn-group" role="group" aria-label="Basic mixed styles example">
                     <a className="col-lg-12" href="tel:6472000964"><button type="button" class="btn btn-success btn-section1">Call Now</button></a>
 
                 </div>
             </section>
-            <section class="section2" id="title">
+            : <section class="section1">
+                <h2 className="header">Can't to drop off? In-home repairs are offered, call to book</h2>
+                <div className="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <a className="col-lg-12" href="tel:6472000964"><button type="button" class="btn btn-success btn-section1">Call Now</button></a>
 
+                </div>
+            </section>
+            }
+            {/* <section class="section1">
+                <h2 className="header">Can't to drop off? In-home repairs are offered, call to book</h2>
+                <div className="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <a className="col-lg-12" href="tel:6472000964"><button type="button" class="btn btn-success btn-section1">Call Now</button></a>
 
-                <div class="row">
+                </div>
+            </section> */}
 
-                    <div class="col-lg-6">
-                        <h1 class="heading-section2">60-minute phone screen repairs offered for a variety of phone brands.</h1>
-                        
+            <section className="section2" id="title">
+                <div className="row">
+                    <div className="col-lg-6">
+                        <h1 className="heading-section2">60-minute phone screen repairs offered for a variety of phone brands.</h1>
+
                         {user === null
-                        ? <Link to='/info'><button type="button" class="btn btn-outline-dark btn-lg download-button btn2-section2">Book Now</button></Link>
-                        : <Link to='/deviceselection'><button type="button" class="btn btn-outline-dark btn-lg download-button btn2-section2">Book Now</button></Link>
-                    }
+                            ? <Link to='/info'><button type="button" class="btn btn-outline-dark btn-lg download-button btn2-section2">Book Now</button></Link>
+                            : <Link to='/deviceselection'><button type="button" class="btn btn-outline-dark btn-lg download-button btn2-section2">Book Now</button></Link>
+                        }
                     </div>
 
                     <div class="col-lg-6">
