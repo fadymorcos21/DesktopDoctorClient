@@ -72,7 +72,7 @@ function Model() {
             </div> */}
 
             <div className="col-lg-12">
-              <Link to='/repairtype' ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"
+              <Link to='/service' ><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"
               >Next</button></Link></div>
 
           </div>

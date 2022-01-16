@@ -1,7 +1,9 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import { Link, useNavigate } from "react-router-dom"
 import { onAuthStateChanged, signOut, signInWithEmailAndPassword } from "firebase/auth"
 import { auth } from '../firebase-config'
+import { ApptContext } from "./ApptContext";
+
 
 function Signin() {
     
@@ -20,6 +22,7 @@ function Signin() {
       const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword)
       console.log(user)
       navigate('/');
+      setRepairDetails({...repairDetails, email : loginEmail})
       } catch (error) {
         console.log(error.message)
       }
@@ -30,6 +33,10 @@ function Signin() {
     };
   
 
+    const {repairDetails, setRepairDetails} = useContext(ApptContext);
+
+
+    console.log(repairDetails)
     return (
         <React.Fragment>
         <div className="outerContainer">
@@ -43,7 +50,7 @@ function Signin() {
                 }}
               />
               <input
-                type="text"
+                type="password"
                 placeholder="Password"
                 onChange={(event) => {
                   setLoginPassword(event.target.value)
@@ -58,7 +65,6 @@ function Signin() {
             <Link to='/signup'><button type="submit">Sign up</button></Link>
 
             <button type="submit" onClick={logout}> Sign out</button>
-            {user?.email}
           </div>
           </div>
         </React.Fragment>

@@ -24,12 +24,12 @@ function Confirm() {
     const { repairDetails, setRepairDetails } = useContext(ApptContext);
     const submitAppointment = () => {
         Axios.post("https://desktop-doctor.herokuapp.com/api/insert", {
+            ema: repairDetails.email,
             fir: repairDetails.first,
             las: repairDetails.last,
             cel: repairDetails.phone,
             dev: repairDetails.deviceName,
             mod: repairDetails.deviceModel,
-            rep: repairDetails.repairType,
             ser: repairDetails.service,
             dat: repairDetails.date,
             tim: repairDetails.time

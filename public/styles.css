@@ -372,6 +372,35 @@ button {
   width: 375px;
   font-size: 18px;
 }
+button:active {
+  border-color: #eee;
+  border: #eee;
+  border-style: none;
+  outline: none;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+button:focus {
+  border-color: #eee;
+  border: #eee;
+  border-style: none;
+  outline: none;
+}
 
 .signin {
 }
@@ -413,8 +442,10 @@ button {
 .special{
   color: black;
   background-color: transparent;
-  font-size: 2em;
+  font-size: 1.5em;
 }
+
+
 
 .dropdown{
   border-radius: 5px;

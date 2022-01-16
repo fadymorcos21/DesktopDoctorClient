@@ -17,13 +17,13 @@ function Info() {
     await signOut(auth)
   };
 
-//   function asignInfo(){
-//     setRepairDetails({ ...repairDetails, first : first})
-//     setRepairDetails({ ...repairDetails, last : last})
-//     setRepairDetails({ ...repairDetails, phone : cellNum})
-//   }
+  //   function asignInfo(){
+  //     setRepairDetails({ ...repairDetails, first : first})
+  //     setRepairDetails({ ...repairDetails, last : last})
+  //     setRepairDetails({ ...repairDetails, phone : cellNum})
+  //   }
 
-  const {repairDetails, setRepairDetails} = useContext(ApptContext);
+  const { repairDetails, setRepairDetails } = useContext(ApptContext);
 
   console.log(repairDetails)
 
@@ -52,12 +52,12 @@ function Info() {
               width: '100%'
 
             }}
-                type="text"
-                placeholder="Enter first name here"
-                onChange={(event) => {
-                  setFirst(event.target.value)
-                }}
-              /></div>
+              type="text"
+              placeholder="Enter first name here"
+              onChange={(event) => {
+                setFirst(event.target.value)
+              }}
+            /></div>
             <div className="col-lg-12 lef"><h4>Last name?</h4></div>
             <div className="col-lg-12 lef"><input style={{
               textAlign: 'left',
@@ -68,13 +68,13 @@ function Info() {
               marginTop: '12px',
               width: '100%'
             }}
-                type="text"
-                placeholder="Enter last name here"
-                onChange={(event) => {
-                  setLast(event.target.value)
-                }}
-              /></div>
-              <div className="col-lg-12 lef"><h4>Phone number?</h4></div>
+              type="text"
+              placeholder="Enter last name here"
+              onChange={(event) => {
+                setLast(event.target.value)
+              }}
+            /></div>
+            <div className="col-lg-12 lef"><h4>Phone number?</h4></div>
             <div className="col-lg-12 lef"><input style={{
               textAlign: 'left',
               marginLeft: 0,
@@ -85,19 +85,22 @@ function Info() {
               width: '100%'
 
             }}
-                type="text"
-                placeholder="Enter last name here"
-                onChange={(event) => {
-                  setCellNum(event.target.value)
-                }}
-              /></div>
-            <div className="col-lg-12"><Link to='/deviceselection'><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"
-            onClick={() => setRepairDetails({ ...repairDetails, first : first, last : last, phone : cellNum})}>
-    
+              type="text"
+              placeholder="Enter last name here"
+              onChange={(event) => {
+                setCellNum(event.target.value)
+              }}
+            /></div>
 
-                        Continue
-                    </button></Link></div>
-                    {/* last : last, phone : cellNum */}
+            <div className="col-lg-12 lef"><h6 className="col-lg-12 lef"> OR <Link to='/signin' style={{color: 'black', margin:'0'}}>sign-in</Link> to be able to track your repairs</h6></div>
+
+            <div className="col-lg-12"><Link to='/deviceselection'><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"
+              onClick={() => setRepairDetails({ ...repairDetails, first: first, last: last, phone: cellNum })}>
+
+
+              Continue
+            </button></Link></div>
+            {/* last : last, phone : cellNum */}
           </div>
         </div>
       </section>

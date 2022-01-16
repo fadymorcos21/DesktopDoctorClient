@@ -25,7 +25,7 @@ function Service() {
             <section className="white-section" id="features">
                 <div className="container-fluid padthai" >
                 <hr></hr>
-                <h2>How do you want to get your device repaired?</h2>
+                <h2>What is the issue with your device?</h2>
                     <div className="row">
                     <Link className="col-lg-4 boxSize" to='/schedule' onClick={() => setRepairDetails({ ...repairDetails, service : "Screen"})}><button className="col-lg-12 special"  >Cracked Screen</button></Link>
                     <Link className="col-lg-4 boxSize" to='/schedule' onClick={() => setRepairDetails({ ...repairDetails, service : "Water"})}><button className="col-lg-12 special"  >Water Damage</button></Link>

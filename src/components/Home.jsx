@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link } from 'react-router-dom';
 import { auth } from '../firebase-config'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 import Header from './Header'
+import { ApptContext } from "./ApptContext";
+
 
 function Home() {
 
+
+    
     const [user, setUser] = useState({})
     const [loggedin, setloggedin] = useState(false);
 
@@ -17,7 +21,11 @@ function Home() {
         await signOut(auth)
     };
 
+    const { repairDetails, setRepairDetails } = useContext(ApptContext);
 
+    // useEffect()
+
+    console.log(repairDetails)
 
     return (
         <React.Fragment>
@@ -30,9 +38,16 @@ function Home() {
                     <h1 class="intro-header">Shedule a repair today</h1>
                     <h6>Now offering drop-off, and in-home repairs</h6>
 
-                    <Link to='/info'><button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
-                        Book a free diagnoses
-                    </button></Link>
+
+
+                    {user === null
+                        ? <Link to='/info'><button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
+                            Book a free diagnoses
+                        </button></Link>
+                        : <Link to='/deviceselection'><button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
+                            Book a free diagnoses
+                        </button></Link>
+                    }
 
                     <div class="container-fluid">
 
@@ -64,10 +79,10 @@ function Home() {
                 </div>
             </section>
             <section class="section1">
-                <h1 class="header">Can't to drop off? In-home repairs are offered, call to book</h1>
+                <h2 class="header">Can't to drop off? In-home repairs are offered, call to book</h2>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <Link to="info">
-                    <button type="button" class="btn btn-success btn-section1">In-home repair</button></Link>
+                    <a className="col-lg-12" href="tel:6472000964"><button type="button" class="btn btn-success btn-section1">Call Now</button></a>
+
                 </div>
             </section>
             <section class="section2" id="title">
@@ -77,7 +92,11 @@ function Home() {
 
                     <div class="col-lg-6">
                         <h1 class="heading-section2">60-minute phone screen repairs offered for a variety of phone brands.</h1>
-                        <Link to='/info'><button type="button" class="btn btn-outline-dark btn-lg download-button btn2-section2">Book Now</button></Link>
+                        
+                        {user === null
+                        ? <Link to='/info'><button type="button" class="btn btn-outline-dark btn-lg download-button btn2-section2">Book Now</button></Link>
+                        : <Link to='/deviceselection'><button type="button" class="btn btn-outline-dark btn-lg download-button btn2-section2">Book Now</button></Link>
+                    }
                     </div>
 
                     <div class="col-lg-6">

@@ -32,9 +32,7 @@ function Header() {
                             </li>
                             
                             
-                            <li class="nav-item" href="">
-                                <Link to="/help"><a>Help</a></Link>
-                            </li>
+                            
                             {user === null
                                 ? <li class="nav-item" href="">
                                     <Link to='/signin'>Log in</Link>
@@ -44,7 +42,7 @@ function Header() {
                                 </li>
                             }
                             {user === null ? null : <li class="nav-item" href="">
-                                <a onClick={logout}>Sign Out</a>
+                                <Link to='/'><a onClick={logout}>Sign Out</a></Link>
                             </li>}
 
 

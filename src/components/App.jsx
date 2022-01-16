@@ -6,7 +6,6 @@ import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Device from "./Device";
 import Service from "./Service";
 import Model from "./Model";
-import Repairtype from "./Repairtype";
 import { ApptContext } from './ApptContext';
 import Schedule from "./Schedule";
 import Info from "./Info";
@@ -18,7 +17,7 @@ import Booked from "./Booked"
 
 
 function App(){
-  const [repairDetails, setRepairDetails] = useState({first: "", last: "", phone: "", deviceName: "", deviceModel : "", repairType : "", service  : "", date : "", time : ""});
+  const [repairDetails, setRepairDetails] = useState({email: "", first: "", last: "", phone: "", deviceName: "", deviceModel : "", service  : "", date : "", time : ""});
 
 
   return (
@@ -30,7 +29,6 @@ function App(){
            <Route path="/signup" element={<Signup/>} />
             <Route path="/deviceselection" element={<Device/>} />
             <Route path="/devicemodel" element={<Model/>} />
-            <Route path="/repairtype" element={<Repairtype/>} />
             <Route path="/service" element={<Service/>} />
             <Route path="/schedule" element={<Schedule/>} />
             {/* new */}
