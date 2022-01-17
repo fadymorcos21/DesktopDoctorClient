@@ -54,7 +54,7 @@ function Model() {
 
             {repairDetails.deviceName === "Console" ? <Console/> : null}
             {repairDetails.deviceName === "Computer" ? <PC/> : null}
-            {repairDetails.deviceName === "Tablet" ? <PC/> : null}
+            {repairDetails.deviceName === "Tablet" ? <Tablet/> : null}
             {repairDetails.deviceName === "Phone" ? <Phone/> : null}
 
             
